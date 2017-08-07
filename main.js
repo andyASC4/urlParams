@@ -19,6 +19,25 @@ function setup(){
     createCanvas(400,400);
     background(123);
 
+    var circleCount = getParam("circleCount") || 1;
+    var color = getParam("color") || "black";
+    var shape = getParam("shape") || "circle";
+
+    fill(color);
+
+    if(shape == "circle"){
+    for(var i = 0; i < circleCount; i++) {
+        ellipse(random(400), random(400), 20);
+    }
+} else if (shape == "square") {
+    for(var i = 0; i < circleCount; i++) {
+        rect(random(400), random(400), 20, 20);
+    }
+}
+
+    // for(var i = 0; i < circleCount; i++) {
+    //     ellipse(random(400), random(400), 20);
+    // }
     //Create a NUMBER of SHAPES with a COLOR
 
 }
